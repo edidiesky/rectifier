@@ -4,7 +4,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import { Home, Layout } from "./screens";
-
+import ConnectModal from "./screens/Connect";
 export default function App() {
   useEffect(() => {
     AOS.init({
@@ -23,6 +23,7 @@ export default function App() {
       <Routes>
         <Route path={"/"} element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="wallets" element={<ConnectModal />} />
         </Route>
       </Routes>
     </div>

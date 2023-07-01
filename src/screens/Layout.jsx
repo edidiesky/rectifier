@@ -28,4 +28,5 @@ export default function Layout() {
 const LayoutContainer = styled.div`
   width: 100%;
   overflow: hidden;
+  background-color: var(--primary);
 `;

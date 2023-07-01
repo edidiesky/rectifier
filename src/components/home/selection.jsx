@@ -4,9 +4,12 @@ import styled from "styled-components";
 import { FiCheckCircle } from "react-icons/fi";
 import { HiOutlineBuildingLibrary } from "react-icons/hi2";
 import { FaOilWell } from "react-icons/fa6";
+import { FaLocationDot } from "react-icons/fa6";
+import { FcComboChart } from "react-icons/fc";
 import { GiPieChart, GiAlarmClock, GiCoinsPile } from "react-icons/gi";
 import { BsFillCalculatorFill } from "react-icons/bs";
 import { IoStatsChart } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 const selectiondata = [
   {
@@ -56,33 +59,55 @@ const selectiondata = [
   },
   {
     text: "Connect to Dapps",
-    subtext: "Click here for connect to dapps related issues.",
+    subtext: "Click here for any issues related to transaction delayed.",
     icon: <IoStatsChart fontSize={"60px"} />,
   },
+
   {
-    text: "Claim Reflection",
-    subtext: "Click here for claim reflection related issues.",
-    icon: <GiCoinsPile fontSize={"60px"} />,
+    text: "Transaction Delay",
+    icon: <FaLocationDot fontSize={"60px"} />,
+    subtext: "Click here for any issues related to transaction delayed.",
   },
   {
-    text: "Migration Issues",
+    text: "Transaction Delay",
     subtext: "Click here for migration related issues",
     icon: <FiCheckCircle />,
   },
+
+  
+
   {
-    text: "Migration Issues",
+    text: "Connect to Dapps",
+    subtext: "Click here for any issues related to transaction delayed.",
+    icon: <IoStatsChart fontSize={"60px"} />,
+  },
+
+  {
+    text: "Transaction Delay",
+    icon: <FaLocationDot fontSize={"60px"} />,
+    subtext: "Click here for any issues related to transaction delayed.",
+  },
+  {
+    text: "Transaction Delay",
     subtext: "Click here for migration related issues",
     icon: <FiCheckCircle />,
   },
+
   {
-    text: "Migration Issues",
-    subtext: "Click here for migration related issues",
-    icon: <FiCheckCircle />,
+    text: "Trading Wallet Issues",
+    subtext: "Click here if you have problem with your trading wallet.",
+    icon: <FcComboChart fontSize={"60px"} />,
   },
   {
-    text: "Migration Issues",
-    subtext: "Click here for migration related issues",
-    icon: <FiCheckCircle />,
+    text: "Unable To Buy Coins/Tokens",
+    subtext:
+      "To trade crypto your account must be marked as a trusted payment source.",
+    icon: <BsFillCalculatorFill fontSize={"60px"} />,
+  },
+  {
+    text: "Other Issues Not Listed",
+    subtext: "If you can't find the issue you are experiencing click here",
+    icon: <BsFillCalculatorFill fontSize={"60px"} />,
   },
 ];
 
@@ -106,7 +131,7 @@ export default function Selectionindex() {
           <div className="w-100 py-2 coinwrapper">
             {selectiondata.map((x, index) => {
               return (
-                <div className="flex card fs-16 text-white item-start column gap-2">
+                <Link to={'/wallets'} className="flex card fs-16 text-white item-start column gap-2">
                   {x.icon}
                   <span className="block fs-24 text-bold">
                     {x.text}
@@ -115,7 +140,7 @@ export default function Selectionindex() {
                       {x.subtext}
                     </span>
                   </span>
-                </div>
+                </Link>
               );
             })}
           </div>

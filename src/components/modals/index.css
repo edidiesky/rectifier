@@ -42,8 +42,8 @@
   background-color: transparent;
 }
 .btn1:hover {
- background-color: #Fff;
- color: var(--primary);
+  background-color: #fff;
+  color: var(--primary);
 }
 .deleteCard .cross {
   position: absolute;
@@ -128,4 +128,33 @@
   font-weight: 400;
   color: var(--grey);
   text-align: center;
+}
+
+.ConnectWrapper {
+  background-color: #fff;
+  width: 50%;
+  border-radius: 20px;
+  padding: 2rem;
+  padding-top: 4rem;
+}
+.Connect {
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.connectcard {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.image {
+  width: 3rem;
+  height: 3rem;
+}
+
+.icon {
+  width: .8rem;
+  border-radius: 50%;
+  background-color: var(--green);
+  height: .8rem;
 }
